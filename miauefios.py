@@ -55,7 +55,7 @@ def draw():
         screen.draw.text("Perdeu! Sua pontuação final foi de:", (150,150), color = "white", fontsize = 25)
         screen.draw.text(str(points), (150,200), color = "white", fontsize = 30)
         screen.draw.text(("Aperte espaço para reiniciar"), (150,250), color = "white", fontsize = 20)
-
+        
     if mode == "win":
         win.draw()
 
@@ -133,7 +133,7 @@ def update(dt):
     if gaton_hp <= 0:
         mode = "end"
 
-    if mode == "end" or mode == "win" and keyboard.space:
+    if (mode == "end" or mode == "win") and keyboard.space:
         mode = "game"
         level = 1
         bg.image = "bg"
