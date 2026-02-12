@@ -108,7 +108,7 @@ def update(dt):
     
         col = gaton.collidelist(novelos_bons)
         if col != -1:
-            gaton_hp += 15
+            gaton_hp += 10
             points += 1
             # reposiciona o novelo
             novelo = novelos_bons[col]
